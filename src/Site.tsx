@@ -161,7 +161,7 @@ const Site: React.FC = () => {
 
   const Button1: React.FC<Button1Props> = ({ fontSize, color, text, changeValue }) => {
     return (
-      <button className={`${color} ${fontSize}`} onClick={() => onChangeValue(changeValue)}>
+      <button className={`${color} ${fontSize} border-2 border-color-red`} onClick={() => onChangeValue(changeValue)}>
         {text}
       </button>
     );
@@ -169,7 +169,7 @@ const Site: React.FC = () => {
 
   const Button3: React.FC<Button2Props> = ({ fontSize, color, text, divideValue }) => {
     return (
-      <button className={`${color} ${fontSize}`} onClick={() => onDivideValue(divideValue)}>
+      <button className={`${color} ${fontSize} `} onClick={() => onDivideValue(divideValue)}>
         {text}
       </button>
     );
@@ -192,7 +192,7 @@ const Site: React.FC = () => {
       </div>
       <div className="App">
         <span className="ml-{10px}"></span>
-        <Button3 text="Multiply" divideValue="mutltiple" color="text-red-500" />
+        <Button3 text="Multiply" divideValue="mutltiple" color="text-green-500" />
       </div>
     </>
   );
