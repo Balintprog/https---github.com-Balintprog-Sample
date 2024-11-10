@@ -84,15 +84,18 @@ const Subsite: React.FC = () => {
         userage: <span className="mr-2">{user.age} </span>
       </div>
 
-      <div>
+      <div className="mt-[50px]">
         {users &&
-          Object.keys(users).map((key, index) =>
-            Object.keys(users[key as any]).map((y, i) => (
-              <div key={i}>
-                {key} : {y}
-              </div>
-            )),
-          )}
+          users.map((item, index) => (
+            <div className="mt-[30px]" key={index}>
+              User {index + 1}:
+              {Object.entries(item).map(([key, value]) => (
+                <div key={key}>
+                  {key} : {value}
+                </div>
+              ))}
+            </div>
+          ))}
       </div>
     </>
   );
