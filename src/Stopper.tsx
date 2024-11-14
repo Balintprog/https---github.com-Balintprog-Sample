@@ -3,7 +3,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { setInterval } from 'timers/promises';
 
 const Stopper: React.FC = () => {
-  const [time, setTime] = useState(0);
+  const [time, setTime] = useState<number>(0);
   const [running, setRunning] = useState(true);
   const timer: any = useRef();
 
@@ -40,6 +40,7 @@ const Stopper: React.FC = () => {
         >
           {running ? 'stop' : 'resume'}
         </button>
+        <button className="resumebtn border-2" onClick={() => setTime(timer)}></button>;
       </div>
     </div>
   );
